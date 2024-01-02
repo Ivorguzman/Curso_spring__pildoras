@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans   
+    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-3.1.xsd
+">
+	<!-- <bean id="miEmpleado" class="es.pildoras.IoC.DirectorEmpleado"> -->
+	<!-- <bean id="miEmpleado" class="es.pildoras.IoC.SecretarioEmpleados" -->
+	<!--<bean id="miEmpleado" class="es.pildoras.IoC.JefeEmpleados" > -->
+
+	<bean id="miEmpleado1" class="es.pildoras.IoC.DirectorEmpleado"></bean>
+	<bean id="miEmpleado2" class="es.pildoras.IoC.SecretarioEmpleados"></bean>
+	<bean id="miEmpleado3" class="es.pildoras.IoC.JefeEmpleados"></bean>
+
+
+
+</beans>
+
+<!-- 
+`
+El bean y el @Autowired son conceptos que se utilizan en el framework de Spring para facilitar la inyección 
+de dependencias. El bean es un objeto que se crea y se gestiona por el contenedor de Spring,
+y que se puede usar en otras partes de la aplicación. 
+
+El @Autowired es una anotación que se usa para indicar al contenedor que inyecte
+una dependencia en un campo, un método o un constructor. 
+
+Por ejemplo: 
+
+si tenemos una clase Servicio que depende de una clase Repositorio, 
+podemos usar el @Autowired para que Spring nos proporcione una instancia de Repositorio
+cuando creamos un Servicio.
+
+Para usar el bean y el @Autowired, necesitamos configurar el contenedor de Spring mediante un archivo xml 
+o mediante anotaciones. 
+En el archivo xml, podemos definir los beans con la etiqueta <bean>, 
+especificando su id, su clase y sus propiedades. 
+
+Por ejemplo:
+
+<bean id="repositorio" class="com.example.Repositorio"/>
+<bean id="servicio" class="com.example.Servicio">
+  <property name="repositorio" ref="repositorio"/>
+</bean>
+
+En este caso, estamos creando dos beans, uno de tipo Repositorio y otro de tipo Servicio, 
+y le estamos diciendo al contenedor que inyecte el bean repositorio en la propiedad repositorio del bean 
+servicio. De esta forma, cuando pidamos al contenedor que nos dé un Servicio,
+nos devolverá una instancia con la dependencia ya resuelta.
+
+
+
+Si usamos anotaciones, podemos omitir el archivo xml y simplemente usar la anotación
+@Component para marcar las clases que queremos que sean beans,
+y la anotación @Autowired para indicar las dependencias. 
+
+Por ejemplo:
+
+@Component
+public class Repositorio {
+  // ...
+}
+
+@Component
+public class Servicio {
+  @Autowired
+  private Repositorio repositorio;
+  // ...
+}
+
+En este caso, estamos haciendo lo mismo que en el ejemplo anterior, pero sin usar el archivo xml. Spring escaneará las clases anotadas con @Component y las registrará como beans en el contenedor. Luego, usará la anotación @Autowired para inyectar las dependencias en los campos correspondientes. Así, cuando pidamos al contenedor que nos dé un Servicio, nos devolverá una instancia con la dependencia ya resuelta.
+ https://programandoenjava.com/autowired-en-spring-boot/
+ https://gustavopeiretti.com/spring-boot-anotacion-autowired/
+ https://www.adictosaltrabajo.com/2017/01/17/como-hacer-una-inyeccion-de-dependencias-opcional-gracias-a-spring-y-la-clase-optional/
+ https://foroayuda.es/comprender-el-uso-de-spring-autowired/
+-->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
