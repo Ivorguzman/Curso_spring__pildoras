@@ -17,28 +17,28 @@ public class SecretarioEmpleados implements Empleados {
 	}
 
 
-	public String getEmail() {
+	public String getCorreo() {
 		return this.email;
 	}
 
 
-	public void setEmail(String email) {
+	public void setCorreo(String email) {
 		this.email = email;
 	}
 
 
-	public String getNombreEmpresa() {
+	public String getEmpresa() {
 		return this.nombreEmpresa;
 	}
 
 
-	public void setNombreEmpresa(String nombreEmpresa) {
+	public void setEmpresa(String nombreEmpresa) {
 		this.nombreEmpresa = nombreEmpresa;
 	}
 
 
 	@Override public String getTareas() {
-		return "Soy SecretarioEmpleados y gestiono todo lo del secretariado";
+		return " Soy SecretarioEmpleados y gestiono todo lo del secretariado";
 	}
 
 

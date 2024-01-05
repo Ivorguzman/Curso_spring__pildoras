@@ -43,26 +43,36 @@ public class UsoMainEmpleados {
 		 */
 
 		System.out.println(contexto.toString());
+		System.out.println();
 
 		Empleados Juan = contexto.getBean("miEmpleado", Empleados.class);
 
-		Empleados Maria = contexto.getBean("miSecretarioEmpleados", Empleados.class);
-
-		System.out.println(Juan);
-		System.out.println(Juan.toString());
+		SecretarioEmpleados Maria = contexto.getBean("miSecretarioEmpleados", SecretarioEmpleados.class);
 
 
 
-		// Paso 3 Utilizar el Bean
+		SecretarioEmpleados Antonia = contexto.getBean("miSecretarioEmpleados", SecretarioEmpleados.class);
+
+
+		// Paso 3 Utilizar el Bean para injeccion de constructor (interface Empleados )
 		System.out.println("Empleado Juan " + Juan.getTareas());
 		System.out.println("Empleado Juan " + Juan.getInformes());
+		System.out.println();
 
-
-		// Paso 3 Utilizar el Bean
+		// Paso 3 Utilizar el Bean para injeccion de campos o atributos de una clase (SecretarioEmpleados)
 		System.out.println("Empleada Maria " + Maria.getTareas());
 		System.out.println("Empleada Maria " + Maria.getInformes());
+		System.out.println("Empleada Maria " + Maria.getEmpresa());
+		System.out.println("Empleada Maria " + Maria.getCorreo());
+		System.out.println();
+		System.out.println();
 
-
+		// Paso 3 Utilizar el Bean para injeccion de campos o atributos de una clase (SecretarioEmpleados)
+		System.out.println("Empleada Antonia " + Antonia.getTareas());
+		System.out.println("Empleada Antonia" + Antonia.getInformes());
+		System.out.println("Empleada Antonia " + Antonia.getEmpresa());
+		System.out.println("Empleada Antonia " + Antonia.getCorreo());
+		System.out.println();
 
 
 		// Paso 4 Cerrar el XML
@@ -74,16 +84,12 @@ public class UsoMainEmpleados {
 	@Override public String toString() {
 		return "UsoMainEmpleados [getClass()=" + this.getClass() + ", hashCode()=" + this.hashCode() + ", toString()=" + super.toString() + "]";
 	}
+	
 
-
-
-
-
-
-
-
-
-
+	
+	
+	
+	
 
 	/*
 	 * 
