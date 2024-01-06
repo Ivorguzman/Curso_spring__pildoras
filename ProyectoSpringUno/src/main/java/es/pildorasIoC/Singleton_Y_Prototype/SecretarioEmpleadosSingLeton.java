@@ -1,6 +1,6 @@
 package es.pildorasIoC.Singleton_Y_Prototype;
 
-public class SecretarioEmpleados implements Empleados {
+public class SecretarioEmpleadosSingLeton implements Empleados {
 
 	// Creacion de campo tipo: CreaciondeInforme(intefaz)
 	private CreacionInformes informeNuevo;
