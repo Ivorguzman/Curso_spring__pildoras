@@ -1,4 +1,4 @@
-package es.pildoras.IoC;
+package es.pildorasIoC.Basico;
 
 public class SecretarioEmpleados implements Empleados {
 
@@ -6,14 +6,36 @@ public class SecretarioEmpleados implements Empleados {
 	private CreacionInformes informeNuevo;
 	
 	
+	public CreacionInformes getInformeNuevo() {
+		return this.informeNuevo;
+	}
+
+	public void setInformeNuevo(CreacionInformes informeNuevo) {
+		this.informeNuevo = informeNuevo;
+	}
+
+
 	private String email;
 	private String nombreEmpresa;
 	
 
 	// Injeccion de dependencia con metodo seter
 	// PASO 2: Creacion del SETER que inyecta la dependencia
-	public void setInformeNuevo(CreacionInformes informeNuevo) {
-		this.informeNuevo = informeNuevo;
+
+	/*
+	 * public void setInformeNuevo(CreacionInformes informeNuevo) {
+	 * this.informeNuevo = informeNuevo;
+	 * }
+	 */
+
+
+	@Override public String getTareas() {
+		return " Soy SecretarioEmpleados y gestiono todo lo del secretariado";
+	}
+
+
+	@Override public String getInformes() {
+		return "Esteinforme  es presentado por SeretarioEmpleado " + this.informeNuevo.getInformes();
 	}
 
 
@@ -37,14 +59,6 @@ public class SecretarioEmpleados implements Empleados {
 	}
 
 
-	@Override public String getTareas() {
-		return " Soy SecretarioEmpleados y gestiono todo lo del secretariado";
-	}
-
-
-	@Override public String getInformes() {
-		return "Esteinforme  es presentado por SeretarioEmpleado " + this.informeNuevo.getInformes();
-	}
 
 
 }

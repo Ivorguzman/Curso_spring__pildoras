@@ -1,4 +1,4 @@
-package es.pildoras.IoC;
+package es.pildorasIoC.Basico;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

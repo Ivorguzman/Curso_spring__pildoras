@@ -1,4 +1,4 @@
-package es.pildoras.IoC;
+package es.pildorasIoC.Basico;
 
 
 // PASO 1: Creacion de la imterfaz para la dependencia

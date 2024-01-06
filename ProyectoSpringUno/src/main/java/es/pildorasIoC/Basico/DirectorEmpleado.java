@@ -1,4 +1,4 @@
-package es.pildoras.IoC;
+package es.pildorasIoC.Basico;
 
 public class DirectorEmpleado implements Empleados {
 
@@ -11,6 +11,16 @@ public class DirectorEmpleado implements Empleados {
 		this.informeNuevo = informeNuevo;
 	}
 
+
+
+
+	@Override public String getTareas() {
+		return "Soy DirectorEmpleado y realizo tareas de  director";
+	}
+
+	@Override public String getInformes() {
+		return "Informe creado por el director" + this.informeNuevo.getInformes();
+	}
 
 
 
@@ -41,13 +51,5 @@ public class DirectorEmpleado implements Empleados {
 	}
 
 
-
-	@Override public String getTareas() {
-		return "Soy DirectorEmpleado y realizo tareas de  director";
-	}
-
-	@Override public String getInformes() {
-		return "Informe creado por el director" + this.informeNuevo.getInformes();
-	}
 
 }
