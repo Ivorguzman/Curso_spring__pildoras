@@ -45,19 +45,28 @@ public class UsoMainEmpleados {
 		System.out.println(contexto.toString());
 		System.out.println();
 
-		Empleados Juan = contexto.getBean("miEmpleado", Empleados.class);
+
+
+		DirectorEmpleado Juan = contexto.getBean("miEmpleado", DirectorEmpleado.class);
 
 		SecretarioEmpleados Maria = contexto.getBean("miSecretarioEmpleados", SecretarioEmpleados.class);
 
-
-
 		SecretarioEmpleados Antonia = contexto.getBean("miSecretarioEmpleados", SecretarioEmpleados.class);
+
+
+
 
 
 		// Paso 3 Utilizar el Bean para injeccion de constructor (interface Empleados )
 		System.out.println("Empleado Juan " + Juan.getTareas());
 		System.out.println("Empleado Juan " + Juan.getInformes());
+		System.out.println("Empleada Juan " + Juan.getEmpresa());
+		System.out.println("Empleada Juan " + Juan.getCorreo());
 		System.out.println();
+		System.out.println();
+
+
+
 
 		// Paso 3 Utilizar el Bean para injeccion de campos o atributos de una clase (SecretarioEmpleados)
 		System.out.println("Empleada Maria " + Maria.getTareas());
@@ -66,6 +75,9 @@ public class UsoMainEmpleados {
 		System.out.println("Empleada Maria " + Maria.getCorreo());
 		System.out.println();
 		System.out.println();
+
+
+
 
 		// Paso 3 Utilizar el Bean para injeccion de campos o atributos de una clase (SecretarioEmpleados)
 		System.out.println("Empleada Antonia " + Antonia.getTareas());
