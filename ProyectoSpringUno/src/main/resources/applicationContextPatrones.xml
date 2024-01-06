@@ -16,7 +16,7 @@
 	<!--****** Bean para injectar los metodo seters de la clase ******** -->
 	<!--[bean miSecretarioEmpleadosSingLeton] -->
 	<bean id="miSecretarioEmpleadosSingLeton"
-		class="es.pildorasIoC.Singleton_Y_Prototype.SecretarioEmpleadosSingLeton">
+		class="es.pildorasIoC.Singleton_Y_Prototype.SecretarioEmpleadosSingLeton" scope="singleton" > <!--  Patron por defecto -->
 		<property name="informeNuevo" ref="miInforme"></property> 
 	</bean>
 	
