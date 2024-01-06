@@ -18,8 +18,8 @@ public class UsoDemoSingeltonPrototype {
 		SecretarioEmpleados Pepe = contexto.getBean("miSecretarioEmpleados", SecretarioEmpleados.class);
 
 
-		System.out.println("Maria ==> " + Maria.hashCode());
-		System.out.println("Pepe ==>  " + Pepe.hashCode());
+		System.out.println("Maria hashCode ==> " + Maria.hashCode());
+		System.out.println("Pepe hashCode  ==> " + Pepe.hashCode());
 
 
 	}

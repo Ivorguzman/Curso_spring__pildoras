@@ -12,7 +12,7 @@
 
 
 	<!-- Paso 3 : Creacon de la dependencia -->
-	<bean id="miInforme" class="es.pildoras.IoC.Informe"></bean>
+	<bean id="miInforme" class="es.pildorasIoC.Singleton_Y_Prototype.Informe"></bean>
 
 
 
@@ -20,7 +20,7 @@
 	<!--****** Bean para injectar los metodo seters de la clase ******** -->
 	<!--[bean miSecretarioEmpleados] -->
 	<bean id="miSecretarioEmpleados"
-		class="es.pildoras.IoC.SecretarioEmpleados">
+		class="es.pildorasIoC.Singleton_Y_Prototype.SecretarioEmpleados">
 		<property name="informeNuevo" ref="miInforme"></property> 
 	
 	</bean>
