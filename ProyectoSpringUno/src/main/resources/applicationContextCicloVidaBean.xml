@@ -24,12 +24,9 @@
 	
 	<!-- bean 01 -->
 	<!--[bean Informe()] Con Parametro init-metohod y destroy-metohod -->
-	<bean id="miInforme"
-		class="es.pildorasIoC.CicloVidaDelBean.Informe"></bean>
-
-
-
-
+	<bean id="miInforme" 
+		class="es.pildorasIoC.CicloVidaDelBean.Informe">
+	</bean>
 
 
 	<!--bean 02 -->
