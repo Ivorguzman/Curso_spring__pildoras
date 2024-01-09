@@ -23,8 +23,6 @@ public class UsoMainCicloVidaBean {
 		// Paso 1 Crear contexto(Cargar archivo XML)
 		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContextCicloVidaBean.xml");
 
-
-
 		// Paso 2 crear el Bean
 		/*
 		 * El método getBean() es una forma de obtener una instancia de un bean
@@ -36,12 +34,7 @@ public class UsoMainCicloVidaBean {
 		System.out.println();
 
 
-
 		DirectorEmpleado Juan = contexto.getBean("miEmpleado", DirectorEmpleado.class);
-
-	
-
-
 
 
 		// Paso 3 Utilizar el Bean para injeccion de constructor (interface Empleados )
@@ -51,17 +44,10 @@ public class UsoMainCicloVidaBean {
 		System.out.println("Empleada Juan  Correo: " + Juan.getCorreo());
 		System.out.println(Juan.toString());
 		System.out.println();
-
-
-
-
-
 		System.out.println();
-
 
 		// Paso 4 Cerrar el XML
 		contexto.close();
-
 
 	}
 

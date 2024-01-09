@@ -3,7 +3,7 @@ package es.pildorasIoC.CicloVidaDelBean;
 public class DirectorEmpleado implements Empleados {
 
 
-	// Paso:1 Creacion de propiedada tipo (intefaz CreacionInformes) para el bean 01(miInforme)
+	// Paso:1 Creacion de propiedada tipo(intefaz CreacionInformes) para el bean 01(miInforme)
 	private CreacionInformes informeNuevo;
 
 
