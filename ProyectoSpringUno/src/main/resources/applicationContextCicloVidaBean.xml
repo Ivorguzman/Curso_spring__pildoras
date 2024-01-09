@@ -7,47 +7,44 @@
     http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context-3.1.xsd ">
+    
+    
 
 <!--********* Archivo externo con los datos  Para injectar los Atibutos de la  clase DirectorEmpleado()  -->
 	<context:property-placeholder location= "classpath:datosEmpresa.propiedades" />
+	
+	
+	
 
+	<!--****** Bean para injectar  al constructor ******** -->
 
 	<!-- Paso 3 : Creacon de la dependencia -->
 	<!-- bean 01 -->
 	<!--[bean Informe()] Con Parametro init-metohod y destroy-metohod --> 
-	<bean id="miInforme" class="es.pildorasIoC.Basico.Informe"></bean>
+	<bean id="miInforme" class="es.pildorasIoC.CicloVidaDelBean.Informe"></bean>
+	
+	
+	
 
 
 
-	<!--****** Bean para injectar  al constructor ******** -->
 	<!--bean 02 --> 
-	<!--[bean DirectorEmpleado()] -->
-	<bean id="miEmpleado" class="es.pildorasIoC.Basico.DirectorEmpleado">
+	<!--[bean DirectorEmpleado()]  Con Parametro init-metohod y destroy-metohod--> 
+	<bean id="miEmpleado" class="es.pildorasIoC.CicloVidaDelBean.DirectorEmpleado" init-method="inicio" destroy-method="fin">
 		<constructor-arg ref="miInforme"></constructor-arg>
-			
-			<!--********* Para injectar los Atibutos de la  clase con la configuracion de archivo externo (datosEmpresa.propiedades) -->
-			<property name="correo" value="${correo}"></property> 
-			<property name="empresa" value="${empresa}"></property> 
-			
-			
-	</bean>
-
-
-	<!--****** Para injectar los Atibutos de la  clase con los metodo seters de la clase ******** -->
-	<!--bean 03 --> 
-	<!--[bean miSecretarioEmpleados()] -->
-	<bean id="miSecretarioEmpleados"
-		class="es.pildorasIoC.Basico.SecretarioEmpleados">
-		<property name="informeNuevo" ref="miInforme"></property> 
-
-		<!-- ********* Para injectar los Atibutos o Compos de la  clase en forma Diirecta ******* -->
+		
+		<!--********* Para injectar los Atibutos de la  clase con la configuracion de archivo externo (datosEmpresa.propiedades)-->
+		<!--
+		<property name="correo" value="${direcionDeCorreo}"></property>
+		<property name="empresa" value="${nombreDeLaEmpresa}"></property>
+		 -->
+		 
+		 	<!-- ********* Para injectar los Atibutos o Compos de la  clase en forma Diirecta ******* -->
 		<property name="correo" value="secretaria@masato.com"></property>
 		<property name="empresa" value="Masato c.a"></property>
-
+		 
 	</bean>
 
-	<!-- <bean id="miEmpleado" class="es.pildoras.IoC.JefeEmpleados"><constructor-arg 
-		ref="miInforme"></constructor-arg></bean> -->
 </beans>
 
 <!-- Los beans son componentes de software reutilizables que pueden ser manipulados 
