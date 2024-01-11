@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="
     http://www.springframework.org/schema/beans   
@@ -8,71 +7,71 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context-3.1.xsd ">
 
-<!--********* Archivo externo con los datos  Para injectar los Atibutos de la  clase DirectorEmpleado()  -->
-	<context:property-placeholder location= "classpath:datosEmpresa.propiedades" />
+	<!--********* Archivo externo con los datos Para injectar los Atibutos de la clase DirectorEmpleado() -->
+	<context:property-placeholder location="classpath:datosEmpresa.propiedades" />
 
 
 	<!-- Paso 3 : Creacon de la dependencia -->
 	<!-- bean 01 -->
-	<!--[bean Informe()] Con Parametro init-metohod y destroy-metohod --> 
+	<!--[bean Informe()] Con Parametro init-metohod y destroy-metohod -->
 	<bean id="miInforme" class="es.pildorasIoC.Basico.Informe"></bean>
 
 
 
-	<!--****** Bean para injectar  al constructor ******** -->
-	<!--bean 02 --> 
+	<!--****** Bean para injectar al constructor ******** -->
+	<!--bean 02 -->
 	<!--[bean DirectorEmpleado()] -->
 	<bean id="miEmpleado" class="es.pildorasIoC.Basico.DirectorEmpleado">
 		<constructor-arg ref="miInforme"></constructor-arg>
-			
-			<!--********* Para injectar los Atibutos de la  clase con la configuracion de archivo externo (datosEmpresa.propiedades) -->
-			<property name="correo" value="${correo}"></property> 
-			<property name="empresa" value="${empresa}"></property> 
-			
-			
+
+		<!--********* Para injectar los Atibutos de la clase con la configuracion de archivo externo (datosEmpresa.propiedades) -->
+		<property name="correo" value="${correo}"></property>
+		<property name="empresa" value="${empresa}"></property>
 	</bean>
 
 
-	<!--****** Para injectar los Atibutos de la  clase con los metodo seters de la clase ******** -->
-	<!--bean 03 --> 
+	<!--****** Para injectar los Atibutos de la clase con los metodo seters de la clase ******** -->
+	<!--bean 03 -->
 	<!--[bean miSecretarioEmpleados()] -->
-	<bean id="miSecretarioEmpleados"
-		class="es.pildorasIoC.Basico.SecretarioEmpleados">
-		<property name="informeNuevo" ref="miInforme"></property> 
+	<bean id="miSecretarioEmpleados" class="es.pildorasIoC.Basico.SecretarioEmpleados">
+		<property name="informeNuevo" ref="miInforme"></property>
 
-		<!-- ********* Para injectar los Atibutos o Compos de la  clase en forma Diirecta ******* -->
+		<!-- ********* Para injectar los Atibutos o Compos de la clase en forma Diirecta ******* -->
 		<property name="correo" value="secretaria@masato.com"></property>
 		<property name="empresa" value="Masato c.a"></property>
-
 	</bean>
 
-	<!-- <bean id="miEmpleado" class="es.pildoras.IoC.JefeEmpleados"><constructor-arg 
+	<!-- <bean id="miEmpleado" class="es.pildoras.IoC.JefeEmpleados"><constructor-arg
 		ref="miInforme"></constructor-arg></bean> -->
 </beans>
 
-<!-- Los beans son componentes de software reutilizables que pueden ser manipulados 
-	visualmente por una herramienta de programación; En el lenguaje Java. Los 
-	beans son clases Java que cumplen con ciertas normas respecto a los nombres 
-	de sus propiedades y métodos. Los beans deben tener un constructor sin argumentos, 
-	además de tener declarados todos sus atributos como privados. Para cada atributo, 
-	debe haber un método setter y getter, añadiendo la palabra set o get al nombre 
-	del atributo. Bean en inglés significa “frijol, haba, alubia” . El término 
-	bean se usa en informática para referirse a un componente de software reutilizable 
-	que se escribe en el lenguaje en un programación . El nombre bean 
-	se eligió porque los componentes de software son como granos o semillas que 
-	se pueden plantar en cualquier lugar y crecer en aplicaciones más complejas -->
- 
- 
- <!--
+<!-- Los beans son componentes de software reutilizables que pueden ser manipulados
+	visualmente por una herramienta de programación; En el lenguaje Java.
+	Los beans son clases Java que cumplen con ciertas normas respecto a los nombres
+	de sus propiedades y métodos.
+
+	Los beans deben tener un constructor sin argumentos, además de tener declarados
+	todos sus atributos como privados. Para cada atributo,
+	debe haber un método setter y getter, añadiendo la palabra set o get al nombre
+	del atributo. Bean en inglés significa “frijol, haba, alubia” .
+
+	El término bean se usa en informática para referirse a un componente de software reutilizable
+	que se escribe en el lenguaje en un programación .
+	El nombre bean se eligió porque los componentes de software son como
+	granos o semillas que se pueden plantar en cualquier lugar
+	y crecer en aplicaciones más complejas -->
+
+
+<!--
 	¿Qué es la inyección de dependencia?
 
-	Dependencia : un objeto normalmente requiere objetos de otras clases para
-	realizar sus operaciones. A estos objetos los llamamos dependencias.
+	Dependencia : un objeto normalmente requiere objetos de otras clases sus
+	metodos y propiedades para realizar sus operaciones.
+	A estos objetos los llamamos dependencias.
 
 	Inyección : El proceso de proporcionar las dependencias requeridas a un
 	objeto. Por lo tanto, la inyección de dependencia ayuda a implementar la
-	inversión
-	de control (IoC).
+	inversión de control (IoC).
 
 	Esto significa que la responsabilidad de crear objetos e inyectar las dependencias
 	se le da al marco (es decir, Spring) en lugar de que la clase cree los objetos

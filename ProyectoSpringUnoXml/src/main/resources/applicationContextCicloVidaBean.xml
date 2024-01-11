@@ -70,32 +70,32 @@
 
 
 <!-- Los beans son componentes de software reutilizables que pueden ser manipulados
-	visualmente por una herramienta de programación; En el lenguaje Java. Los
-	beans son clases Java que cumplen con ciertas normas respecto a los nombres
-	de sus propiedades y métodos. Los beans deben tener un constructor sin argumentos,
-	además de tener declarados todos sus atributos como privados. Para cada
-	atributo,
-	debe haber un método setter y getter, añadiendo la palabra set o get al
-	nombre
-	del atributo. Bean en inglés significa “frijol, haba, alubia” . El término
-	bean se usa en informática para referirse a un componente de software reutilizable
-	que se escribe en el lenguaje en un programación . El nombre bean
-	se eligió porque los componentes de software son como granos o semillas
-	que
-	se pueden plantar en cualquier lugar y crecer en aplicaciones más complejas -->
+	visualmente por una herramienta de programación; En el lenguaje Java.
+	Los beans son clases Java que cumplen con ciertas normas respecto a los nombres
+	de sus propiedades y métodos.
 
+	Los beans deben tener un constructor sin argumentos, además de tener declarados
+	todos sus atributos como privados. Para cada atributo,
+	debe haber un método setter y getter, añadiendo la palabra set o get al nombre
+	del atributo. Bean en inglés significa “frijol, haba, alubia” .
+
+	El término bean se usa en informática para referirse a un componente de software reutilizable
+	que se escribe en el lenguaje en un programación .
+	El nombre bean se eligió porque los componentes de software son como
+	granos o semillas que se pueden plantar en cualquier lugar
+	y crecer en aplicaciones más complejas -->
 
 
 <!--
 	¿Qué es la inyección de dependencia?
 
-	Dependencia : un objeto normalmente requiere objetos de otras clases para
-	realizar sus operaciones. A estos objetos los llamamos dependencias.
+	Dependencia : un objeto normalmente requiere objetos de otras clases sus
+	metodos y propiedades para realizar sus operaciones.
+	A estos objetos los llamamos dependencias.
 
 	Inyección : El proceso de proporcionar las dependencias requeridas a un
 	objeto. Por lo tanto, la inyección de dependencia ayuda a implementar la
-	inversión
-	de control (IoC).
+	inversión de control (IoC).
 
 	Esto significa que la responsabilidad de crear objetos e inyectar las dependencias
 	se le da al marco (es decir, Spring) en lugar de que la clase cree los objetos
