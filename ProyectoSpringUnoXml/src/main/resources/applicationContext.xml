@@ -63,7 +63,21 @@
 	se pueden plantar en cualquier lugar y crecer en aplicaciones más complejas -->
  
  
- 
+ <!--
+	¿Qué es la inyección de dependencia?
+
+	Dependencia : un objeto normalmente requiere objetos de otras clases para
+	realizar sus operaciones. A estos objetos los llamamos dependencias.
+
+	Inyección : El proceso de proporcionar las dependencias requeridas a un
+	objeto. Por lo tanto, la inyección de dependencia ayuda a implementar la
+	inversión
+	de control (IoC).
+
+	Esto significa que la responsabilidad de crear objetos e inyectar las dependencias
+	se le da al marco (es decir, Spring) en lugar de que la clase cree los objetos
+	de dependencia por sí misma.
+-->
  
  
  
