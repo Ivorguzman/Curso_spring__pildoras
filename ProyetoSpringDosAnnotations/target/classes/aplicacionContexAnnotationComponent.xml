@@ -8,8 +8,8 @@
     http://www.springframework.org/schema/context/spring-context-3.1.xsd ">
 
 
-
 	<!-- <context:component-scan base-package="..."/> es una anotación de Spring
+
 		que le permite
 		especificar los paquetes que desea escanear para buscar las clases anotadas
 		con:
@@ -26,9 +26,9 @@
 		de otras anotaciones dentro de los beans, como @Autowired, @PostConstruct,
 		@Value, etc.
 
-		Un ejemplo de uso de context:component-scan es el siguiente DONDE base-package="es.pildorasIoC.Annotations"
+		Un ejemplo de uso de context:component-scan es el siguiente DONDE base-package="...."
 		es paquete a escanear donde se encuentran las clases a escanear -->
-	<context:component-scan base-package="es.pildorasIoC.Annotations" />
+	<context:component-scan base-package="es.pildorasIoC.AnnotationsComponent" />
 
 
 </beans>

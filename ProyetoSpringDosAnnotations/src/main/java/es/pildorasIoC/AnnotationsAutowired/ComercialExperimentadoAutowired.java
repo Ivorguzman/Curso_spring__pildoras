@@ -1,5 +1,6 @@
-package es.pildorasIoC.AnnotationsComponent;
+package es.pildorasIoC.AnnotationsAutowired;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 
@@ -13,23 +14,39 @@ import org.springframework.stereotype.Component;
  */
 
 
-// @Component("Experimentado") Se espesifica el id del bean como: "Experimentado". Primer parametro del metodo getBean("Experimentado",...)
 
+// @Component("ComercialExperimentadoAutowired")
 @Component // Sin espesificar el id registra el bean con el nombre de la la clase en minuscula
-public class ComercialExperimentadoComponent implements Empleados {
+public class ComercialExperimentadoAutowired implements Empleados {
+
+
+	private CreacionInformeFinanciero nuevoInforme;
+
+	@Autowired
+	public ComercialExperimentadoAutowired(CreacionInformeFinanciero nuevoIFinanciero) {
+
+		this.nuevoInforme = nuevoIFinanciero;
+	}
+
+
+
 
 	@Override public String getTareas() {
-		// TODO Esbozo de método generado automáticamente
-
 		return "Gran volumen de vetas de alta facturación";
 	}
 
 	@Override public String getInformes() {
-		// TODO Esbozo de método generado automáticamente
-		return "Informe generado por el comercial";
+		// return "Informe generado por el comercial";
+		return this.nuevoInforme.getInformeFinaciero();
+
 	}
 
+
+
 }
+
+
+
 
 
 

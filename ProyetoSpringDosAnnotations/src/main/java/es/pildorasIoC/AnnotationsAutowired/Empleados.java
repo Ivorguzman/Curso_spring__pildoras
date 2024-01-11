@@ -1,4 +1,4 @@
-package es.pildorasIoC.AnnotationsComponent;
+package es.pildorasIoC.AnnotationsAutowired;
 
 public interface Empleados {
 
