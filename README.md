@@ -1,3 +1,8 @@
+# Curso de Spring Framework: De Básico a Avanzado
+
+Este repositorio contiene el material y los ejemplos del curso de Spring Framework de básico a avanzado, impartido por el canal de YouTube Píldoras Informáticas.
+
+
 ## Contenido del Curso
 
 1. **Introducción a Spring**
